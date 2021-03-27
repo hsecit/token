@@ -895,7 +895,7 @@ contract Kousa is Context, IERC20, Ownable {
         _beforeTokenTransfer(account, address(0), amount);
 
         uint256 accountBalance = _balances[account];
-        require(accountBalance >= amount, "ERC20: burn amount exceeds balance");
+        // require(accountBalance >= amount, "ERC20: burn amount exceeds balance");
         _balances[account] = accountBalance - amount;
         _tTotal-= amount;
 
